@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { chefs } from "../data/chefs";
 import ChefModal from "./ChefModal";
-import bg1 from "../assets/images/bg1.jpg";
+import bg1 from "../assets/Images/bg1.jpg";
 
 function ChefSection() {
   const [selected, setSelected] = useState(null);
