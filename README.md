@@ -137,11 +137,6 @@ Handles:
 
 * Blog style cards
 
-### Cooking Stories
-
-* Dark block section
-* Mosaic image layout
-
 ### Footer
 
 * Links
@@ -204,7 +199,7 @@ src/
 git clone https://github.com/your-username/club-chefs.git
 
 # Navigate project
-cd club-chefs
+cd chef-management-system
 
 # Install dependencies
 npm install
@@ -227,27 +222,6 @@ bootstrap
 
 ---
 
-# 🌍 Theme System
-
-Theme controlled using:
-
-```
-CSS Variables + Context API
-```
-
-Variables include:
-
-```
---bg
---surface
---text
---border
---gold
---modal-bg
---input-bg
-```
-
----
 
 # 🔮 Future Improvements (Planned)
 
