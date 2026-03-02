@@ -3,7 +3,9 @@
 A modern **premium culinary website UI** built using **React.js**, inspired by luxury editorial food brands.
 This project showcases chef profiles, recipes, community stories, and authentication modals with elegant animations and theme support.
 
----
+--- 
+# 🚀 Deploy URL 
+https://chef-management-task-1.netlify.app/
 
 # 🚀 Live Concept
 
