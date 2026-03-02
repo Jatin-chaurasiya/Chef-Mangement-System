@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthContext";
-import image3 from "../assets/images/image-3.jpg";
+import image3 from "../assets/Images/image-3.jpg";
 
 function LoginModal() {
 

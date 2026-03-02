@@ -1,6 +1,6 @@
-import news1 from "../assets/images/news1.jpg";
-import news2 from "../assets/images/news2.jpg";
-import news3 from "../assets/images/news3.jpg";
+import news1 from "../assets/Images/news1.jpg";
+import news2 from "../assets/Images/news2.jpg";
+import news3 from "../assets/Images/news3.jpg";
 export const news = [
   { id:1, title:"Élise Fontaine Opens New Atelier in the 8th Arrondissement", date:"February 18, 2026",
     excerpt:"The celebrated French chef expands her culinary empire with an intimate 22-seat tasting room that promises to redefine Parisian fine dining for a new generation.",

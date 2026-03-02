@@ -1,7 +1,7 @@
-import chef1 from "../assets/images/chef1.jpg";
-import chef2 from "../assets/images/chef2.jpg";
-import chef3 from "../assets/images/chef3.jpg";
-import chef4 from "../assets/images/chef4.jpg";
+import chef1 from "../assets/Images/chef1.jpg";
+import chef2 from "../assets/Images/chef2.jpg";
+import chef3 from "../assets/Images/chef3.jpg";
+import chef4 from "../assets/Images/chef4.jpg";
 
 export const chefs = [
   { id:1, name:"Élise Fontaine", title:"Executive Chef · Paris", specialty:"French Haute Cuisine", experience:"18 years",

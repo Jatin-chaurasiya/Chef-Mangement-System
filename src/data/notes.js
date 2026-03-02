@@ -1,6 +1,6 @@
-import notes1 from "../assets/images/notes1.jpg";
-import notes2 from "../assets/images/notes2.jpg";
-import notes3 from "../assets/images/notes3.jpg";
+import notes1 from "../assets/Images/notes1.jpg";
+import notes2 from "../assets/Images/notes2.jpg";
+import notes3 from "../assets/Images/notes3.jpg";
 
 export const notes = [
   { id:1, title:"The Art of Umami", date:"Feb 22", excerpt:"Five ingredients that unlock savory depth in every dish — from aged parmesan to koji-fermented butter. Understanding umami transforms good cooking into great cooking.", image:notes1 },

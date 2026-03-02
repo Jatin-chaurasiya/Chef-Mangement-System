@@ -1,5 +1,5 @@
 import { notes } from "../data/notes";
-import notes1 from "../assets/images/notes1.jpg";
+import notes1 from "../assets/Images/notes1.jpg";
 
 function Notes() {
   return (

@@ -12,8 +12,6 @@ import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    // ✅ Providers sirf yahan — ek baar, sahi order mein
-    // ThemeProvider bahar, AuthProvider andar
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
@@ -25,8 +23,6 @@ function App() {
           </Routes>
 
           <Footer />
-
-          {/* Modals — AuthContext ke andar hain, isliye openLogin/openRegister kaam karenge */}
           <LoginModal />
           <RegisterModal />
 
