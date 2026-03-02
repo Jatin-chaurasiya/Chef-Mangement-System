@@ -3,17 +3,12 @@ function Hero() {
     <section id="home">
       <div id="hero" className="relative flex items-center justify-center overflow-hidden">
 
-        {/* Background */}
         <div id="hero-bg"></div>
 
-        {/* Overlay */}
         <div id="hero-overlay"></div>
 
-        {/* Content */}
-        <div
-          id="hero-content"
-          className="relative text-center px-3"
-        >
+        <div id="hero-content" className="relative text-center px-3">
+
           <p className="eyebrow mb-3">
             Welcome to the world's finest culinary collective
           </p>
@@ -43,7 +38,6 @@ function Hero() {
           </a>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="scroll-indicator">
           <span
             style={{
@@ -56,9 +50,9 @@ function Hero() {
           >
             Scroll
           </span>
-
           <div className="scroll-line"></div>
         </div>
+
       </div>
     </section>
   );

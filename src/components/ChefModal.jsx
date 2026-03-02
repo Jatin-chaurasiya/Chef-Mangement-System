@@ -20,27 +20,17 @@ function ChefModal({ chef, onClose }) {
         </button>
 
         <div className="row g-0">
-
-          {/* Image */}
           <div className="col-md-5">
             <img
               src={chef.image}
               alt={chef.name}
               className="w-full block"
-              style={{
-                height: 400,
-                objectFit: "cover",
-              }}
+              style={{ height: 400, objectFit: "cover" }}
             />
           </div>
-
-          {/* Content */}
           <div className="col-md-7">
             <div className="p-10">
-
-              <p className="eyebrow mb-2">
-                {chef.specialty}
-              </p>
+              <p className="eyebrow mb-2">{chef.specialty}</p>
 
               <h3
                 className="mb-1"
@@ -48,8 +38,9 @@ function ChefModal({ chef, onClose }) {
                   fontFamily: "'Cormorant Garamond',serif",
                   fontSize: "2.4rem",
                   fontWeight: 400,
-                  color: "#fff",
+                  color: "var(--text)",   
                   lineHeight: 1.1,
+                  transition: "color 0.45s",
                 }}
               >
                 {chef.name}
@@ -60,8 +51,9 @@ function ChefModal({ chef, onClose }) {
                 style={{
                   fontFamily: "'Poppins',sans-serif",
                   fontSize: "0.72rem",
-                  color: "rgba(255,255,255,0.35)",
+                  color: "var(--text-muted)",
                   letterSpacing: "1.5px",
+                  transition: "color 0.45s",
                 }}
               >
                 {chef.title}
@@ -72,8 +64,9 @@ function ChefModal({ chef, onClose }) {
                 style={{
                   fontFamily: "'Poppins',sans-serif",
                   fontSize: "0.87rem",
-                  color: "rgba(255,255,255,0.58)",
+                  color: "var(--text-sub)",
                   lineHeight: 1.88,
+                  transition: "color 0.45s",
                 }}
               >
                 {chef.bio}
@@ -81,20 +74,15 @@ function ChefModal({ chef, onClose }) {
 
               <p
                 className="eyebrow mb-2"
-                style={{
-                  fontSize: "0.6rem",
-                  letterSpacing: "3px",
-                }}
+                style={{ fontSize: "0.6rem", letterSpacing: "3px" }}
               >
                 Awards & Recognition
               </p>
-
               {chef.awards.map((a) => (
                 <div key={a} className="award-item">
                   ✦ &nbsp;{a}
                 </div>
               ))}
-
               <span
                 className="inline-block mt-6"
                 style={{

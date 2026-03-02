@@ -1,18 +1,13 @@
 function Intro() {
   return (
-    <section
-      id="recipes"
-      className="py-28"
-      style={{ background: "#0d0d0d" }}
-    >
+
+    <section id="recipes" className="section-alt py-28">
       <div className="container-xl px-4 px-lg-5">
         <div className="row align-items-center g-5">
 
-          {/* LEFT CONTENT */}
-          <div
-            className="col-lg-6"
-            style={{ animationDelay: "0.2s" }}
-          >
+          {/* ── LEFT CONTENT ── */}
+          <div className="col-lg-6" style={{ animationDelay: "0.2s" }}>
+
             <p className="eyebrow mb-3">Our Philosophy</p>
 
             <h2
@@ -21,11 +16,13 @@ function Intro() {
                 fontFamily: "'Cormorant Garamond',serif",
                 fontSize: "clamp(2.4rem,5vw,4.2rem)",
                 fontWeight: 300,
-                color: "#fff",
+                color: "var(--text)",        
                 lineHeight: 1.12,
+                transition: "color 0.45s",
               }}
             >
-              Make Every <em style={{ color: "#D4AF37", fontStyle: "italic" }}>
+              Make Every{" "}
+              <em style={{ color: "#D4AF37", fontStyle: "italic" }}>
                 Cooking
               </em>
               <br />
@@ -37,8 +34,9 @@ function Intro() {
               style={{
                 fontFamily: "'Poppins',sans-serif",
                 fontSize: "0.9rem",
-                color: "rgba(255,255,255,0.5)",
+                color: "var(--text-sub)",    
                 lineHeight: 1.95,
+                transition: "color 0.45s",
               }}
             >
               We believe that food is more than sustenance — it's a language, a
@@ -48,8 +46,8 @@ function Intro() {
               chef carries a world.
             </p>
 
-            {/* Buttons */}
             <div className="flex gap-3 flex-wrap items-center mb-12">
+
               <a href="#our-chefs" className="btn-ghost">
                 Meet the Chefs
               </a>
@@ -71,8 +69,9 @@ function Intro() {
                   style={{
                     fontFamily: "'Poppins',sans-serif",
                     fontSize: "0.7rem",
-                    color: "rgba(255,255,255,0.42)",
+                    color: "var(--text-muted)",
                     letterSpacing: "1px",
+                    transition: "color 0.45s",
                   }}
                 >
                   Watch our story
@@ -80,11 +79,11 @@ function Intro() {
               </div>
             </div>
 
-            {/* Stats */}
             <div
               className="pt-8"
               style={{
-                borderTop: "1px solid rgba(255,255,255,0.07)",
+                borderTop: "1px solid var(--border)", 
+                transition: "border-color 0.45s",
               }}
             >
               <div className="row g-3">
@@ -94,34 +93,32 @@ function Intro() {
                   ["12", "Michelin Stars"],
                 ].map(([n, l]) => (
                   <div key={l} className="col-4">
+
                     <div className="stat-num">{n}</div>
+
                     <div className="stat-label mt-1">{l}</div>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="col-lg-6">
             <div className="relative">
-
               <div
                 className="absolute top-[-18px] left-[-18px] w-[52%] h-[52%] rounded"
                 style={{
                   border: "1px solid rgba(212,175,55,0.18)",
                   zIndex: 0,
                 }}
-              ></div>
+              />
 
               <img
                 src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=85"
                 alt="Chef at work"
                 className="w-full block relative z-[1] rounded"
-                style={{
-                  height: 520,
-                  objectFit: "cover",
-                }}
+                style={{ height: 520, objectFit: "cover" }}
               />
 
               <div className="gold-accent-card">
@@ -136,7 +133,6 @@ function Intro() {
                 >
                   15+
                 </div>
-
                 <div
                   style={{
                     fontFamily: "'Poppins',sans-serif",

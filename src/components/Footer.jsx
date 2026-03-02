@@ -1,24 +1,18 @@
-import { footerLinks } from "../data/footerData"; // optional
+import { footerLinks } from "../data/footerData";
 
 function Footer() {
   return (
-    <footer
-      id="contact"
-      className="py-20 pb-8"
-      style={{
-        background: "#050505",
-        borderTop: "1px solid rgba(212,175,55,0.1)",
-      }}
-    >
+
+    <footer id="contact" className="pt-20 pb-8">
       <div className="container-xl px-4 px-lg-5">
 
         <div className="row g-5 mb-5">
 
-          {/* Brand */}
           <div className="col-lg-4">
+
             <div className="flex items-center gap-2 mb-4">
               <div
-                className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm"
+                className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
                 style={{
                   background: "linear-gradient(135deg,#D4AF37,#F5D76E)",
                   fontFamily: "'Cormorant Garamond',serif",
@@ -29,7 +23,7 @@ function Footer() {
               </div>
 
               <span
-                className="uppercase tracking-[3px] text-[1.42rem] font-semibold text-white"
+                className="footer-brand-text uppercase tracking-[3px] text-[1.42rem] font-semibold"
                 style={{ fontFamily: "'Cormorant Garamond',serif" }}
               >
                 Club Chefs
@@ -37,11 +31,10 @@ function Footer() {
             </div>
 
             <p
-              className="mb-8 max-w-[295px]"
+              className="footer-desc mb-8 max-w-[295px]"
               style={{
                 fontFamily: "'Poppins',sans-serif",
                 fontSize: "0.82rem",
-                color: "rgba(255,255,255,0.35)",
                 lineHeight: 1.88,
               }}
             >
@@ -59,9 +52,8 @@ function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="col-6 col-lg-2">
-            <p className="eyebrow mb-4 text-[0.58rem] tracking-[3px]">
+            <p className="eyebrow text-[0.58rem] tracking-[3px]">
               Navigation
             </p>
 
@@ -69,10 +61,9 @@ function Footer() {
               <a
                 key={l.label}
                 href={l.href}
-                className="block py-1 text-[0.78rem] transition-colors"
+                className="footer-link block py-1 text-[0.78rem] transition-colors hover:text-[#D4AF37]"
                 style={{
                   fontFamily: "'Poppins',sans-serif",
-                  color: "rgba(255,255,255,0.38)",
                   textDecoration: "none",
                   letterSpacing: "0.5px",
                 }}
@@ -82,9 +73,8 @@ function Footer() {
             ))}
           </div>
 
-          {/* Contact */}
           <div className="col-6 col-lg-3">
-            <p className="eyebrow mb-4 text-[0.58rem] tracking-[3px]">
+            <p className="eyebrow text-[0.58rem] tracking-[3px]">
               Get In Touch
             </p>
 
@@ -95,13 +85,10 @@ function Footer() {
             ].map(([icon, text]) => (
               <div
                 key={text}
-                className="flex items-center gap-2 py-1 text-[0.79rem]"
-                style={{
-                  fontFamily: "'Poppins',sans-serif",
-                  color: "rgba(255,255,255,0.35)",
-                }}
+                className="footer-contact-row flex items-center gap-2 py-1 text-[0.79rem]"
+                style={{ fontFamily: "'Poppins',sans-serif" }}
               >
-                <span className="text-[0.55rem] text-[#D4AF37]">
+                <span className="text-[0.55rem]" style={{ color: "#D4AF37" }}>
                   {icon}
                 </span>
                 {text}
@@ -109,17 +96,15 @@ function Footer() {
             ))}
           </div>
 
-          {/* Newsletter */}
           <div className="col-lg-3">
-            <p className="eyebrow mb-4 text-[0.58rem] tracking-[3px]">
+            <p className="eyebrow text-[0.58rem] tracking-[3px]">
               Newsletter
             </p>
 
             <p
-              className="mb-4 text-[0.79rem]"
+              className="footer-desc mb-4 text-[0.79rem]"
               style={{
                 fontFamily: "'Poppins',sans-serif",
-                color: "rgba(255,255,255,0.35)",
                 lineHeight: 1.75,
               }}
             >
@@ -131,18 +116,16 @@ function Footer() {
               <input id="footer-input" placeholder="Your email address" />
 
               <button
-                className="px-4 py-2 transition-transform"
+                className="px-4 py-2 transition-transform hover:scale-105"
                 style={{
-                  background:
-                    "linear-gradient(135deg,#D4AF37,#B8962A)",
+                  background: "linear-gradient(135deg,#D4AF37,#B8962A)",
                   border: "none",
                   borderRadius: 2,
                   color: "#0a0a0a",
                   fontFamily: "'Poppins',sans-serif",
-                  fontSize: "0.75rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   cursor: "pointer",
-                  letterSpacing: "1px",
                 }}
               >
                 →
@@ -151,18 +134,12 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div
-          className="flex flex-wrap justify-between items-center gap-4 pt-8"
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-          }}
-        >
+        <div className="footer-bottom flex flex-wrap justify-between items-center gap-4 pt-8">
+
           <p
-            className="m-0 text-[0.68rem]"
+            className="footer-copy m-0 text-[0.68rem]"
             style={{
               fontFamily: "'Poppins',sans-serif",
-              color: "rgba(255,255,255,0.22)",
               letterSpacing: "0.5px",
             }}
           >
@@ -170,25 +147,23 @@ function Footer() {
           </p>
 
           <div className="flex gap-8 flex-wrap">
-            {["Privacy Policy", "Terms of Use", "Cookies"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-[0.65rem]"
-                  style={{
-                    fontFamily: "'Poppins',sans-serif",
-                    color: "rgba(255,255,255,0.22)",
-                    textDecoration: "none",
-                    letterSpacing: "0.5px",
-                  }}
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {["Privacy Policy", "Terms of Use", "Cookies"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="footer-copy text-[0.65rem] hover:text-[#D4AF37] transition-colors"
+                style={{
+                  fontFamily: "'Poppins',sans-serif",
+                  textDecoration: "none",
+                  letterSpacing: "0.5px",
+                }}
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
+
       </div>
     </footer>
   );

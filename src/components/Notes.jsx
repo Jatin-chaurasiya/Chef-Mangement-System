@@ -1,57 +1,41 @@
-import { notes } from "../data/notes";   // ✅ correct file
+import { notes } from "../data/notes";
+import notes1 from "../assets/images/notes1.jpg";
 
 function Notes() {
   return (
     <section id="notes">
 
-      {/* Banner */}
-      <div
-        className="section-banner"
-        style={{ height: 340 }}
-      >
+      <div className="section-banner" style={{ height: 340 }}>
         <div
           className="section-banner-bg"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80')",
+              `url(${notes1})`,
           }}
-        ></div>
-
+        />
         <div
           className="absolute inset-0"
           style={{
             background:
               "linear-gradient(135deg,rgba(0,0,0,0.8) 0%,rgba(10,8,0,0.55) 100%)",
           }}
-        ></div>
-
+        />
         <div className="section-banner-content text-center">
-          <p className="eyebrow mb-3">
-            From the Kitchen
-          </p>
+          <p className="eyebrow mb-3">From the Kitchen</p>
           <h2 className="section-heading">
             Editor's <em>Notes</em>
           </h2>
         </div>
       </div>
 
-      {/* Content */}
-      <div
-        className="py-20"
-        style={{ background: "#0a0a0a" }}
-      >
+      <div className="section-dark py-20">
         <div className="container-xl px-4 px-lg-5">
-
           <div className="row g-4">
 
             {notes.map((note) => (
-              <div
-                key={note.id}
-                className="col-md-4"
-              >
+              <div key={note.id} className="col-md-4">
                 <div className="cursor-pointer">
 
-                  {/* Image */}
                   <div
                     className="relative overflow-hidden rounded mb-5"
                     style={{ height: 200 }}
@@ -63,15 +47,13 @@ function Notes() {
                     />
                   </div>
 
-                  {/* Date Line */}
                   <div className="flex items-center gap-4 mb-3">
                     <span
                       style={{
-                        fontFamily:
-                          "'Poppins',sans-serif",
+                        fontFamily: "'Poppins',sans-serif",
                         fontSize: "0.58rem",
                         letterSpacing: "2.5px",
-                        color: "#D4AF37",
+                        color: "#D4AF37",         
                         textTransform: "uppercase",
                       }}
                     >
@@ -79,38 +61,38 @@ function Notes() {
                     </span>
 
                     <div
-                      className="flex-1 h-[1px]"
+                      className="flex-1"
                       style={{
-                        background:
-                          "rgba(255,255,255,0.07)",
+                        height: 1,
+                        background: "var(--border)",
+                        transition: "background 0.45s",
                       }}
-                    ></div>
+                    />
                   </div>
 
                   {/* Title */}
                   <h4
                     className="mb-3"
                     style={{
-                      fontFamily:
-                        "'Cormorant Garamond',serif",
+                      fontFamily: "'Cormorant Garamond',serif",
                       fontSize: "1.52rem",
                       fontWeight: 400,
-                      color: "#fff",
+                      color: "var(--text)",    
                       lineHeight: 1.22,
+                      transition: "color 0.45s",
                     }}
                   >
                     {note.title}
                   </h4>
 
-                  {/* Text */}
+                  {/* Excerpt */}
                   <p
                     style={{
-                      fontFamily:
-                        "'Poppins',sans-serif",
+                      fontFamily: "'Poppins',sans-serif",
                       fontSize: "0.82rem",
-                      color:
-                        "rgba(255,255,255,0.42)",
+                      color: "var(--text-sub)",   
                       lineHeight: 1.78,
+                      transition: "color 0.45s",
                     }}
                   >
                     {note.excerpt}
@@ -121,9 +103,9 @@ function Notes() {
             ))}
 
           </div>
-
         </div>
       </div>
+
     </section>
   );
 }
